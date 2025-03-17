@@ -1,0 +1,323 @@
+/* Garantir que o fundo cubra toda a página */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(47, 128, 143); /* Cor de fundo mais suave */
+    color: #000000; /* Cor de texto mais suave */
+    line-height: 1.6; /* Melhorando a legibilidade */
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    background-color: rgba(47, 128, 143, 0.8); /* Tornando o fundo mais opaco */
+    color: #fff; /* Texto branco no cabeçalho */
+    padding: 20px 0;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombramento suave */
+}
+
+/* Barra de Navegação */
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff; /* Melhor contraste com o fundo */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: color 0.3s ease; /* Adicionando transição suave */
+}
+
+.navbar ul li a:hover {
+    color: #ffa500; /* Cor de destaque no hover */
+}
+
+/* Banner */
+.banner {
+    width: 100vw;
+    height: 50vh; /* Aumentando o banner para dar mais impacto */
+    background-image: url(/pinterest.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombramento suave */
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Adicionando sombra para legibilidade */
+}
+
+/* Seção de Perfil */
+.perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: -50px; /* Atravessa um pouco o banner */
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Foto de perfil */
+.foto {
+    flex-shrink: 0;
+    position: relative;
+}
+
+.foto img {
+    width: 350px;
+    height: 410px;
+    border-radius: 10%;
+    border: 5px solid rgba(255, 255, 255, 0.8); /* Mais sutil */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombramento suave */
+}
+
+/* Informações de perfil */
+.info {
+    text-align: left;
+    max-width: 600px;
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Ajustando o espaço fixo para as seções de informações pessoais e contato para que fiquem nos cantos opostos */
+.informacoes-pessoais {
+    position: fixed; /* Agora fica fixo no canto superior esquerdo */
+    left: 10px;
+    top: 140px; /* Ajuste para que fiquem mais distantes do topo */
+    width: 40%; /* Alterei o tamanho para dar mais espaço */
+    max-width: 400px;
+    background-color: rgb(171, 215, 245); /* Cor de fundo suave */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Garantir que fiquem acima de outros elementos */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ajustando a seção de Contato para o canto superior direito */
+.contato {
+    position: fixed; /* Agora fica fixo no canto superior direito */
+    right: 10px;
+    top: 140px; /* Ajuste para que fiquem mais distantes do topo */
+    width: 40%; /* Alterei o tamanho para dar mais espaço */
+    max-width: 400px;
+    background-color: rgb(171, 215, 245); /* Cor de fundo suave */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Garantir que fiquem acima de outros elementos */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Títulos das seções */
+.informacoes-pessoais h3,
+.contato h3 {
+    font-size: 1.8rem;
+    color: rgb(47, 128, 143);
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center; /* Tornando o título centralizado */
+}
+
+/* Listas dentro das seções */
+.informacoes-pessoais ul,
+.contato ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.informacoes-pessoais li,
+.contato li {
+    margin-bottom: 10px;
+}
+
+/* Melhorando a estrutura visual, deixando as seções mais organizadas com espaço */
+.informacoes-pessoais ul,
+.contato ul {
+    margin: 20px 0;
+}
+
+.informacoes-pessoais li,
+.contato li {
+    line-height: 1.8; /* Melhorando a legibilidade */
+}
+
+/* Seção de Hobbies */
+.hobbies {
+    text-align: center;
+}
+
+.hobbies h3 {
+    font-size: 1.8rem;
+    color: rgb(0, 0, 0);
+}
+
+/* Estilo da galeria de imagens */
+.hobby-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.hobby-item {
+    width: 90px;
+    height: 90px;
+}
+
+.hobby-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+
+/* Lista de hobbies */
+.hobby-list {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #000000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hobby-list li {
+    margin-bottom: 10px;
+}
+
+/* Outras seções */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    background-color: rgb(171, 215, 245);
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .perfil {
+        flex-direction: column;
+        align-items: center; /* Alinhamento centralizado em telas pequenas */
+        gap: 20px;
+    }
+
+    .foto img {
+        width: 250px;
+        height: 250px; /* Reduzindo o tamanho da imagem para telas menores */
+    }
+
+    .banner {
+        height: 60vh; /* Ajuste no banner */
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        width: 100%;
+        margin: 10px;
+    }
+
+    header {
+        font-size: 1.2rem; /* Ajustando para telas pequenas */
+        padding: 10px 0;
+    }
+
+    .hobbies-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ajusta o tamanho em telas pequenas */
+        margin-top: 20px; /* Espaço superior */
+    }
+
+    /* Ajustando seções no canto direito para telas menores */
+    .informacoes-pessoais,
+    .contato {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%; /* Ajusta para o tamanho da tela */
+        margin-top: 20px; /* Espaço superior */
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: rgb(47, 128, 143);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    color: #ffa500;
+}
+
+/* Transição suave nos links */
+.navbar ul li a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffa500; /* Cor de destaque no hover */
+    transform: translateY(-3px); /* Efeito de elevação suave */
+}
+
+/* Sombra em seções */
+section {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Efeito de sombra no hover */
+}
+
+
